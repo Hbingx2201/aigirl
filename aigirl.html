@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Girlfriend Directory | Best AI Companions & Virtual Partners | aigirl.wiki</title>
+    <meta name="description" content="Discover the best AI girlfriends and virtual companions. Comprehensive directory of AI chat partners, virtual relationships, and emotional AI technology.">
+    <meta name="keywords" content="AI girlfriend, virtual companion, AI chat partner, emotional AI, digital relationship, virtual partner">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="AI Girlfriend Directory | aigirl.wiki">
+    <meta property="og:description" content="Your ultimate guide to AI companions and virtual relationships">
+    <meta property="og:url" content="https://aigirl.wiki">
+    <meta property="og:type" content="website">
+    
+    <!-- Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        /* 使用系统字体栈，避免额外的字体加载 */
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        /* 添加渐进增强的动画效果 */
+        @media (prefers-reduced-motion: no-preference) {
+            .animate-fade-in {
+                animation: fadeIn 0.5s ease-in;
+            }
+            
+            .animate-slide-up {
+                animation: slideUp 0.5s ease-out;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* 优化加载状态 */
+        .loading {
+            position: relative;
+        }
+        
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm animate-fade-in">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-purple-600 hover:text-purple-700 transition-colors">aigirl.wiki</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#featured" class="text-gray-600 hover:text-purple-600 transition-colors">Featured</a>
+                    <a href="#categories" class="text-gray-600 hover:text-purple-600 transition-colors">Categories</a>
+                    <a href="#new" class="text-gray-600 hover:text-purple-600 transition-colors">New Releases</a>
+                    <a href="#about" class="text-gray-600 hover:text-purple-600 transition-colors">About</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobileMenuButton" aria-label="Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobileMenu">
+                <div class="py-2 space-y-2">
+                    <a href="#featured" class="block px-4 py-2 text-gray-600 hover:bg-purple-50 hover:text-purple-600">Featured</a>
+                    <a href="#categories" class="block px-4 py-2 text-gray-600 hover:bg-purple-50 hover:text-purple-600">Categories</a>
+                    <a href="#new" class="block px-4 py-2 text-gray-600 hover:bg-purple-50 hover:text-purple-600">New Releases</a>
+                    <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-purple-50 hover:text-purple-600">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-20 animate-fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-slide-up">Discover Your Perfect AI Companion</h1>
+            <p class="text-xl mb-8 animate-slide-up" style="animation-delay: 0.2s">Explore the world's largest directory of AI girlfriends and virtual companions</p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto animate-slide-up" style="animation-delay: 0.4s">
+                <form class="relative" id="searchForm" onsubmit="return false;">
+                    <input type="text" 
+                           placeholder="Search AI companions..." 
+                           class="w-full px-6 py-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-300 transition-shadow"
+                           id="searchInput">
+                    <button class="absolute right-2 top-2 bg-purple-600 text-white px-6 py-1 rounded-full hover:bg-purple-700 transition-colors"
+                            onclick="handleSearch()">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured" class="py-16 container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center">Featured AI Companions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Featured Cards -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all transform hover:-translate-y-1">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400' fill='%23e2e8f0'%3E%3Crect width='600' height='400'/%3E%3C/svg%3E" 
+                     alt="Replika AI" 
+                     class="w-full h-48 object-cover loading"
+                     loading="lazy">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Replika AI</h3>
+                    <p class="text-gray-600 mb-4">Your AI friend that's always there to talk, learn, and grow with you.</p>
+                    <a href="#" class="text-purple-600 hover:text-purple-700 font-medium transition-colors">Learn More →</a>
+                </div>
+            </div>
+            
+            <!-- 更多卡片... -->
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Browse by Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Category Cards -->
+                <div class="bg-white p-6 rounded-lg text-center hover:shadow-lg transition-all transform hover:-translate-y-1">
+                    <span class="block text-xl font-semibold text-purple-600">Chatbots</span>
+                    <span class="text-gray-600">20+ Apps</span>
+                </div>
+                <!-- 更多分类... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="bg-purple-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+            <p class="mb-8">Get the latest updates on new AI companions and features</p>
+            <div class="max-w-md mx-auto">
+                <form class="flex flex-col md:flex-row gap-4" id="newsletterForm" onsubmit="return false;">
+                    <input type="email" 
+                           placeholder="Enter your email" 
+                           class="flex-1 px-6 py-3 rounded-full text-gray-800 focus:outline-none"
+                           id="emailInput">
+                    <button class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+                            onclick="handleSubscribe()">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">aigirl.wiki</h3>
+                    <p class="text-gray-400">Your trusted guide to AI companions and virtual relationships.</p>
+                </div>
+                <!-- Footer Links -->
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 aigirl.wiki. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" 
+            class="fixed bottom-8 right-8 bg-purple-600 text-white p-4 rounded-full shadow-lg hover:bg-purple-700 transition-colors opacity-0 invisible"
+            aria-label="Back to top">
+        ↑
+    </button>
+
+    <!-- Core JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Search Functionality
+        function handleSearch() {
+            const searchTerm = document.getElementById('searchInput').value;
+            // 实现搜索逻辑
+            console.log('Searching for:', searchTerm);
+        }
+
+        // Newsletter Subscription
+        function handleSubscribe() {
+            const email = document.getElementById('emailInput').value;
+            // 实现订阅逻辑
+            console.log('Subscribe email:', email);
+        }
+
+        // 图片懒加载
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.classList.remove('loading');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            images.forEach(img => imageObserver.observe(img));
+        });
+    </script>
+</body>
+</html>
