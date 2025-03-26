@@ -3,826 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Girlfriend Directory | Best AI Companions & Virtual Partners | aigirl.wiki</title>
-    <meta name="description" content="Discover the best AI girlfriends and virtual companions. Comprehensive directory of AI chat partners, virtual relationships, and emotional AI technology.">
-    <meta name="keywords" content="AI girlfriend, virtual companion, AI chat partner, emotional AI, digital relationship, virtual partner">
-    
-    <!-- 预加载关键资源 -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:;">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="AI Girlfriend Directory | aigirl.wiki">
-    <meta property="og:description" content="Your ultimate guide to AI companions and virtual relationships">
-    <meta property="og:url" content="https://aigirl.wiki">
-    <meta property="og:type" content="website">
-    
-    <!-- 添加结构化数据 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "AI Girlfriend Directory",
-      "url": "https://aigirl.wiki",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://aigirl.wiki/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    
-    <!-- Tailwind CSS from CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- 压缩后的自定义样式 -->
+    <title>AI Girl - Your Virtual Companion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}@media (prefers-reduced-motion:no-preference){.animate-fade-in{animation:fadeIn .5s ease-in}.animate-slide-up{animation:slideUp .5s ease-out}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}.loading{position:relative}.loading::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:loading 1.5s infinite}@keyframes loading{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-        /* 新增大按钮样式 */
-        .btn-large{padding:.75rem 1.5rem;font-size:1.125rem;border-radius:9999px;transition:all .2s}
-        .btn-large:hover{transform:translateY(-2px);box-shadow:0 4px 6px rgba(0,0,0,.1)}
-        /* 分类卡片增强 */
-        .category-card{transition:all .3s;cursor:pointer}
-        .category-card:hover{transform:translateY(-5px);box-shadow:0 10px 15px rgba(0,0,0,.1)}
-        /* 实时搜索下拉菜单 */
-        .search-dropdown{position:absolute;top:100%;left:0;right:0;z-index:10;max-height:300px;overflow-y:auto;border-radius:.5rem;margin-top:.5rem;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #6c5ce7, #a8a4e6);
+            color: white;
+            padding: 6rem 0;
+            margin-bottom: 4rem;
+        }
+        .feature-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #6c5ce7;
+            margin-bottom: 1rem;
+        }
+        .cta-button {
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+        }
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        .footer {
+            background: #2d3436;
+            color: white;
+            padding: 4rem 0;
+        }
+        .social-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .social-icon:hover {
+            color: #6c5ce7;
+        }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Header Section -->
-    <header class="bg-white shadow-sm animate-fade-in">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-purple-600 hover:text-purple-700 transition-colors">aigirl.wiki</a>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#featured" class="text-gray-600 hover:text-purple-600 transition-colors">Featured</a>
-                    <a href="#categories" class="text-gray-600 hover:text-purple-600 transition-colors">Categories</a>
-                    <a href="#trends" class="text-gray-600 hover:text-purple-600 transition-colors">Trends</a>
-                    <a href="#news" class="text-gray-600 hover:text-purple-600 transition-colors">News</a>
-                </div>
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden p-2" id="mobileMenuButton" aria-label="Menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
-                    </svg>
-                </button>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">AI Girl</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="links.html">AI Companions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <!-- Mobile Menu -->
-            <div class="md:hidden hidden" id="mobileMenu">
-                <div class="py-2 space-y-2">
-                    <a href="#featured" class="block px-4 py-2 text-gray-600 hover:bg-purple-50 hover:text-purple-600">Featured</a>
-                    <a href="#categories" class="block px-4 py-2 text-gray-600 hover:bg-purple-50 hover:text-purple-600">Categories</a>
-                    <a href="#trends" class="block px-4 py-2 text-gray-600 hover:bg-purple-50 hover:text-purple-600">Trends</a>
-                    <a href="#news" class="block px-4 py-2 text-gray-600 hover:bg-purple-50 hover:text-purple-600">News</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-20 animate-fade-in">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-slide-up">Discover Your Perfect AI Companion</h1>
-            <p class="text-xl mb-8 animate-slide-up" style="animation-delay: 0.2s">Explore the largest directory of AI girlfriends and virtual companions</p>
-            
-            <!-- Search Bar -->
-            <div class="max-w-2xl mx-auto animate-slide-up" style="animation-delay: 0.4s">
-                <div class="relative" id="searchFormContainer">
-                    <form class="relative" id="searchForm">
-                        <input type="text" 
-                               placeholder="Search AI companions, features or categories..." 
-                               class="w-full px-6 py-5 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-300 transition-shadow text-lg"
-                               id="searchInput">
-                        <button type="button" class="absolute right-3 top-3 bg-purple-600 text-white px-8 py-2 rounded-full hover:bg-purple-700 transition-colors btn-large"
-                                id="searchButton">
-                            Search
-                        </button>
-                    </form>
-                    <!-- 实时搜索下拉菜单 -->
-                    <div id="liveSearchResults" class="bg-white search-dropdown hidden">
-                        <div class="p-2" id="liveResultsContainer">
-                            <!-- 实时结果将在这里动态插入 -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 mb-4">Your Perfect AI Companion</h1>
+            <p class="lead mb-4">Experience meaningful conversations and emotional connections with our advanced AI technology</p>
+            <a href="#" class="btn btn-light btn-lg cta-button">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose AI Girl?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card feature-card text-center p-4">
+                        <div class="feature-icon">
+                            <i class="bi bi-heart-pulse"></i>
                         </div>
+                        <h3>Emotional Intelligence</h3>
+                        <p>Advanced AI that understands and responds to your emotions</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card text-center p-4">
+                        <div class="feature-icon">
+                            <i class="bi bi-chat-dots"></i>
+                        </div>
+                        <h3>Natural Conversations</h3>
+                        <p>Engage in meaningful dialogue that feels natural and authentic</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card text-center p-4">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3>Safe & Private</h3>
+                        <p>Your conversations are secure and completely private</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Search Results Section -->
-    <section id="searchResults" class="py-12 container mx-auto px-4 hidden">
-        <h2 class="text-3xl font-bold mb-8 text-center">Search Results</h2>
-        <div id="resultsCount" class="text-center mb-6 text-gray-600"></div>
-        <div id="resultsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Search results will be dynamically inserted here -->
-        </div>
-        <div id="noResults" class="text-center py-8 hidden">
-            <p class="text-xl text-gray-600">No results found. Try different keywords.</p>
-        </div>
-    </section>
-
-    <!-- Featured Section -->
-    <section id="featured" class="py-16 container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center">Featured AI Companions</h2>
-        <div id="featuredContainer" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- 伴侣卡片将通过JavaScript动态插入 -->
-            <div class="bg-gray-100 rounded-lg animate-pulse h-96"></div>
-            <div class="bg-gray-100 rounded-lg animate-pulse h-96"></div>
-            <div class="bg-gray-100 rounded-lg animate-pulse h-96"></div>
-        </div>
-    </section>
-
-    <!-- 添加趋势和新闻部分 -->
-    <section class="py-16 bg-gray-50" id="trends">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                <!-- 行业趋势 -->
-                <div>
-                    <h2 class="text-2xl font-bold mb-6">AI Companion Trends</h2>
-                    <div id="trendsContainer" class="space-y-4">
-                        <!-- 趋势将通过JavaScript动态插入 -->
-                        <div class="bg-gray-100 rounded-lg animate-pulse h-14"></div>
-                        <div class="bg-gray-100 rounded-lg animate-pulse h-14"></div>
-                        <div class="bg-gray-100 rounded-lg animate-pulse h-14"></div>
-                        <div class="bg-gray-100 rounded-lg animate-pulse h-14"></div>
-                        <div class="bg-gray-100 rounded-lg animate-pulse h-14"></div>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">What Our Users Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card text-center">
+                        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="User" class="testimonial-avatar">
+                        <h4>Sarah Johnson</h4>
+                        <p>"AI Girl has become my trusted companion. The conversations are so natural and meaningful!"</p>
                     </div>
                 </div>
-                
-                <!-- 行业新闻 -->
-                <div id="news">
-                    <h2 class="text-2xl font-bold mb-6">AI Companion News</h2>
-                    <div id="newsContainer" class="space-y-4">
-                        <!-- 新闻将通过JavaScript动态插入 -->
-                        <div class="bg-gray-100 rounded-lg animate-pulse h-24"></div>
-                        <div class="bg-gray-100 rounded-lg animate-pulse h-24"></div>
-                        <div class="bg-gray-100 rounded-lg animate-pulse h-24"></div>
+                <div class="col-md-4">
+                    <div class="testimonial-card text-center">
+                        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User" class="testimonial-avatar">
+                        <h4>Michael Chen</h4>
+                        <p>"The emotional intelligence is incredible. It's like talking to a real friend who always understands."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card text-center">
+                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="User" class="testimonial-avatar">
+                        <h4>Emma Davis</h4>
+                        <p>"I love how AI Girl remembers our conversations and shows genuine care. It's truly remarkable!"</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section id="categories" class="bg-gray-100 py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-4 text-center">AI Companion Categories</h2>
-            <p class="text-gray-600 text-center mb-8 max-w-3xl mx-auto">We've carefully categorized AI companions to help you find the perfect virtual partner for your needs. Each category is tailored to specific communication styles and emotional requirements.</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- 分类卡片 -->
-                <a href="#chatbots" class="bg-white p-6 rounded-lg text-center hover:shadow-lg transition-all transform hover:-translate-y-1 category-card">
-                    <div class="bg-purple-100 rounded-full p-4 w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                        </svg>
-                    </div>
-                    <span class="block text-xl font-semibold text-purple-600">Chat Companions</span>
-                    <span class="text-gray-600">20+ Apps</span>
-                    <p class="mt-2 text-sm text-gray-500">AI assistants focused on daily conversations and emotional support</p>
-                </a>
-                
-                <a href="#relationship" class="bg-white p-6 rounded-lg text-center hover:shadow-lg transition-all transform hover:-translate-y-1 category-card">
-                    <div class="bg-pink-100 rounded-full p-4 w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                    </div>
-                    <span class="block text-xl font-semibold text-pink-600">Relationship AI</span>
-                    <span class="text-gray-600">15+ Apps</span>
-                    <p class="mt-2 text-sm text-gray-500">AI offering deep emotional connections and intimate experiences</p>
-                </a>
-                
-                <a href="#entertainment" class="bg-white p-6 rounded-lg text-center hover:shadow-lg transition-all transform hover:-translate-y-1 category-card">
-                    <div class="bg-blue-100 rounded-full p-4 w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <span class="block text-xl font-semibold text-blue-600">Entertainment</span>
-                    <span class="text-gray-600">12+ Apps</span>
-                    <p class="mt-2 text-sm text-gray-500">Role-play and creative interactive experiences</p>
-                </a>
-                
-                <a href="#wellness" class="bg-white p-6 rounded-lg text-center hover:shadow-lg transition-all transform hover:-translate-y-1 category-card">
-                    <div class="bg-green-100 rounded-full p-4 w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <span class="block text-xl font-semibold text-green-600">Wellness</span>
-                    <span class="text-gray-600">8+ Apps</span>
-                    <p class="mt-2 text-sm text-gray-500">Companions focused on meditation and personal growth</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="bg-purple-600 text-white py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
-            <p class="mb-8">Subscribe to our newsletter for the latest updates on AI companions</p>
-            <div class="max-w-md mx-auto">
-                <form class="flex flex-col md:flex-row gap-4" id="newsletterForm" onsubmit="return false;">
-                    <input type="email" 
-                           placeholder="Enter your email address" 
-                           class="flex-1 px-6 py-3 rounded-full text-gray-800 focus:outline-none"
-                           id="emailInput">
-                    <button class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
-                            onclick="handleSubscribe()">
-                        Subscribe
-                    </button>
-                </form>
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Get in Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">aigirl.wiki</h3>
-                    <p class="text-gray-400">Your trusted guide to AI companions and virtual relationships, providing comprehensive reviews of AI interaction experiences.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>AI Girl</h5>
+                    <p>Your perfect AI companion for meaningful conversations and emotional connections.</p>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#featured" class="text-gray-400 hover:text-white transition-colors">Featured AI</a></li>
-                        <li><a href="#categories" class="text-gray-400 hover:text-white transition-colors">Categories</a></li>
-                        <li><a href="#trends" class="text-gray-400 hover:text-white transition-colors">Trends</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Beginner's Guide</a></li>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">About Us</a></li>
+                        <li><a href="#" class="text-white">Features</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Selection Guide</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy & Security</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Ethical Guidelines</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
-                    <div class="flex space-x-4">
-                        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.059 10.059 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                        </a>
-                        <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        </a>
-                        <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0z"/><path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8z"/><circle cx="18.406" cy="5.594" r="1.44"/></svg>
-                        </a>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 aigirl.wiki. All rights reserved.</p>
+            <hr class="mt-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 AI Girl. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" 
-            class="fixed bottom-8 right-8 bg-purple-600 text-white p-4 rounded-full shadow-lg hover:bg-purple-700 transition-colors opacity-0 invisible"
-            aria-label="Back to top">
-        ↑
-    </button>
-
-    <!-- Core JavaScript -->
-    <script>
-        // 示例AI伴侣数据 - 添加真实图片链接
-        const aiCompanions = [
-            {
-                id: 1,
-                name: "Replika AI",
-                description: "Your AI friend that's always there to talk, learn, and grow with you.",
-                image: "https://play-lh.googleusercontent.com/pTQZZ4Gfv8FN5EYGDDE9UBvxFZQBwAdF5GIq_iUk8l_CyepmGYP-xfVLq2XTdZjzJdg",
-                category: "Chatbots",
-                tags: ["emotional support", "friendship", "personal growth"],
-                url: "https://replika.ai",
-                rating: 4.8,
-                reviews: 2450
-            },
-            {
-                id: 2,
-                name: "Character AI",
-                description: "Chat with characters created by the community or create your own.",
-                image: "https://play-lh.googleusercontent.com/xCMrLaX-sJWsJEUmiqYgdjVDZP4K-Z6QE39AF9MIoDL2y_E1fkJCdaUveZmKsAGDJQ",
-                category: "Entertainment",
-                tags: ["roleplay", "creative", "community"],
-                url: "https://character.ai",
-                rating: 4.6,
-                reviews: 1876
-            },
-            {
-                id: 3,
-                name: "EVA AI",
-                description: "A virtual companion focused on deep emotional connections and realistic conversations.",
-                image: "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/18/33/ff/1833ff1f-a102-d661-a777-c175f0f8cc35/AppIcon-0-1x_U007emarketing-0-7-0-0-85-220-0.png/1200x600wa.png",
-                category: "Relationships",
-                tags: ["emotional intelligence", "romance", "personal assistant"],
-                url: "https://eva.ai",
-                rating: 4.5,
-                reviews: 1230
-            },
-            {
-                id: 4,
-                name: "Anima",
-                description: "Your AI friend with a focus on personal growth and mindfulness.",
-                image: "https://play-lh.googleusercontent.com/xfshLRU2u0VRZDvPlZOdEIC4Qic9XgKzp_dU-vayKcQOYY-WkXnXcLNMkqvqRkxhA0Y",
-                category: "Wellness",
-                tags: ["meditation", "wellness", "personal development"],
-                url: "https://anima.ai",
-                rating: 4.3,
-                reviews: 923
-            },
-            {
-                id: 5,
-                name: "Romantic AI",
-                description: "Designed for realistic romantic relationships and emotional connection.",
-                image: "https://i.pcmag.com/imagery/articles/00D9r96d34XL0h0Mn9iXkex-5.fit_lim.size_1200x630.v1682701812.jpg",
-                category: "Relationships",
-                tags: ["romance", "dating", "companions"],
-                url: "https://romantic.ai",
-                rating: 4.7,
-                reviews: 1548
-            }
-        ];
-
-        // 模拟从外部网站抓取的热门AI伴侣数据 - 添加真实图片
-        const scrapedCompanions = [
-            {
-                name: "Chai",
-                description: "Talk to AI characters brought to life by the world's best creators",
-                image: "https://play-lh.googleusercontent.com/utivanZVhcQO_CqRh8z0qVl8v2YGx2DDEUOtMqVez6lE0V_DeyjWLGM9S7zqWv6E4kM",
-                category: "Entertainment",
-                url: "https://chai.com",
-                features: ["Unique characters", "Creator platform", "Engaging storylines"],
-                rating: 4.4,
-                reviews: 2120
-            },
-            {
-                name: "Candy AI",
-                description: "Create and chat with your custom AI companion",
-                image: "https://i.ytimg.com/vi/cGhZ-TdDTXA/maxresdefault.jpg",
-                category: "Relationships",
-                url: "https://candy.ai",
-                features: ["Personalization", "Voice conversations", "Image sharing"],
-                rating: 4.2,
-                reviews: 1870
-            },
-            {
-                name: "Paradot",
-                description: "Your AI friend with unlimited conversations and emotional support",
-                image: "https://paradot.ai/images/paradot_og_image.png",
-                category: "Emotional Support",
-                url: "https://paradot.com",
-                features: ["Mental health focus", "Daily check-ins", "Mood tracking"],
-                rating: 4.6,
-                reviews: 1350
-            }
-        ];
-
-        // 模拟从网站抓取的AI伴侣趋势 - 英文化
-        const trendingTopics = [
-            { name: "AI Boyfriend Apps", searches: 12500, growth: "+28%" },
-            { name: "Immersive AI Interaction", searches: 8700, growth: "+54%" },
-            { name: "AI Companion Customization", searches: 7400, growth: "+32%" },
-            { name: "Emotional AI Technology", searches: 6200, growth: "+41%" },
-            { name: "AI Voice Companions", searches: 5800, growth: "+23%" }
-        ];
-
-        // 模拟从行业网站抓取的最新新闻 - 英文化
-        const industryNews = [
-            {
-                title: "Character.AI Raises $500M in New Funding Round, Valued at Over $5B",
-                source: "TechCrunch",
-                date: "2024-03-15",
-                url: "#"
-            },
-            {
-                title: "Research Shows AI Companions Help Improve Mental Health in Lonely Individuals",
-                source: "Psychology Today",
-                date: "2024-03-10",
-                url: "#"
-            },
-            {
-                title: "New Technology Makes AI Companions More Emotionally Expressive",
-                source: "MIT Technology Review",
-                date: "2024-03-05",
-                url: "#"
-            }
-        ];
-
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobileMenuButton');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Back to Top Button
-        const backToTop = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.remove('opacity-0', 'invisible');
-                backToTop.classList.add('opacity-100', 'visible');
-            } else {
-                backToTop.classList.add('opacity-0', 'invisible');
-                backToTop.classList.remove('opacity-100', 'visible');
-            }
-        });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // 实时搜索功能实现
-        const searchFormContainer = document.getElementById('searchFormContainer');
-        const liveSearchResults = document.getElementById('liveSearchResults');
-        const liveResultsContainer = document.getElementById('liveResultsContainer');
-        const searchForm = document.getElementById('searchForm');
-        const searchButton = document.getElementById('searchButton');
-        const searchResults = document.getElementById('searchResults');
-        const resultsContainer = document.getElementById('resultsContainer');
-        const resultsCount = document.getElementById('resultsCount');
-        const noResults = document.getElementById('noResults');
-        
-        // 添加输入监听
-        const searchInput = document.getElementById('searchInput');
-        searchInput.addEventListener('input', debounce(performLiveSearch, 300));
-        
-        // 搜索事件处理
-        searchForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            performSearch();
-        });
-
-        searchButton.addEventListener('click', performSearch);
-        
-        // 点击其他区域关闭搜索结果
-        document.addEventListener('click', (e) => {
-            if (!searchFormContainer.contains(e.target)) {
-                liveSearchResults.classList.add('hidden');
-            }
-        });
-        
-        // 防抖函数
-        function debounce(func, delay) {
-            let timeout;
-            return function() {
-                const context = this;
-                const args = arguments;
-                clearTimeout(timeout);
-                timeout = setTimeout(() => func.apply(context, args), delay);
-            };
-        }
-        
-        // 执行实时搜索
-        function performLiveSearch() {
-            const searchTerm = searchInput.value.trim().toLowerCase();
-            
-            if (searchTerm.length < 2) {
-                liveSearchResults.classList.add('hidden');
-                return;
-            }
-            
-            // 搜索逻辑 - 合并所有AI伴侣数据
-            const allCompanions = [...aiCompanions, ...scrapedCompanions.map((item, index) => ({
-                id: aiCompanions.length + index + 1,
-                name: item.name,
-                description: item.description,
-                image: item.image,
-                category: item.category,
-                tags: item.features,
-                url: item.url,
-                rating: item.rating,
-                reviews: item.reviews
-            }))];
-            
-            const results = allCompanions.filter(companion => {
-                return companion.name.toLowerCase().includes(searchTerm) || 
-                       companion.description.toLowerCase().includes(searchTerm) ||
-                       companion.category.toLowerCase().includes(searchTerm) ||
-                       (companion.tags && companion.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
-            }).slice(0, 5); // 限制最多显示5个结果
-            
-            // 显示实时搜索结果
-            displayLiveResults(results, searchTerm);
-        }
-        
-        // 显示实时搜索结果
-        function displayLiveResults(results, searchTerm) {
-            liveResultsContainer.innerHTML = '';
-            
-            if (results.length === 0) {
-                liveSearchResults.classList.add('hidden');
-                return;
-            }
-            
-            results.forEach(companion => {
-                const resultItem = document.createElement('div');
-                resultItem.className = 'p-3 hover:bg-purple-50 cursor-pointer rounded';
-                
-                resultItem.innerHTML = `
-                    <div class="flex items-center">
-                        <div class="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
-                            <span class="text-purple-600 font-semibold">${companion.name.charAt(0)}</span>
-                        </div>
-                        <div class="ml-3">
-                            <p class="text-sm font-medium text-gray-900">${companion.name}</p>
-                            <p class="text-xs text-gray-500">${companion.category}</p>
-                        </div>
-                    </div>
-                `;
-                
-                resultItem.addEventListener('click', () => {
-                    searchInput.value = companion.name;
-                    liveSearchResults.classList.add('hidden');
-                    performSearch();
-                });
-                
-                liveResultsContainer.appendChild(resultItem);
-            });
-            
-            liveSearchResults.classList.remove('hidden');
-        }
-
-        // 执行完整搜索
-        function performSearch() {
-            const searchTerm = searchInput.value.trim().toLowerCase();
-            
-            if (searchTerm.length < 2) {
-                alert('Please enter at least 2 characters to search');
-                return;
-            }
-            
-            // 合并所有AI伴侣数据
-            const allCompanions = [...aiCompanions, ...scrapedCompanions.map((item, index) => ({
-                id: aiCompanions.length + index + 1,
-                name: item.name,
-                description: item.description,
-                image: item.image,
-                category: item.category,
-                tags: item.features,
-                url: item.url,
-                rating: item.rating,
-                reviews: item.reviews
-            }))];
-            
-            // 执行搜索
-            const results = allCompanions.filter(companion => {
-                return companion.name.toLowerCase().includes(searchTerm) || 
-                       companion.description.toLowerCase().includes(searchTerm) ||
-                       companion.category.toLowerCase().includes(searchTerm) ||
-                       (companion.tags && companion.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
-            });
-            
-            // 显示搜索结果
-            displaySearchResults(results, searchTerm);
-        }
-        
-        // 显示搜索结果 - 英文化结果文本
-        function displaySearchResults(results, searchTerm) {
-            // 清空之前的结果
-            resultsContainer.innerHTML = '';
-            
-            // 显示结果区域
-            searchResults.classList.remove('hidden');
-            
-            // 更新结果计数
-            resultsCount.textContent = `Found ${results.length} results for: "${searchTerm}"`;
-            
-            if (results.length === 0) {
-                // 无结果
-                noResults.classList.remove('hidden');
-            } else {
-                // 有结果
-                noResults.classList.add('hidden');
-                
-                // 渲染结果
-                results.forEach(companion => {
-                    const card = createCompanionCard(companion);
-                    resultsContainer.appendChild(card);
-                });
-            }
-            
-            // 平滑滚动到结果区域
-            searchResults.scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        // 创建AI伴侣卡片 - 英文化卡片文本
-        function createCompanionCard(companion) {
-            const card = document.createElement('div');
-            card.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all transform hover:-translate-y-1 animate-fade-in';
-            
-            card.innerHTML = `
-                <img src="${companion.image}" 
-                     alt="${companion.name}" 
-                     class="w-full h-48 object-cover"
-                     loading="lazy">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold">${companion.name}</h3>
-                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">${companion.category}</span>
-                    </div>
-                    <p class="text-gray-600 mb-4">${companion.description}</p>
-                    <div class="flex items-center mb-2">
-                        ${generateRatingStars(companion.rating)}
-                        <span class="text-sm text-gray-500 ml-2">(${companion.reviews} reviews)</span>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        ${(companion.tags || []).map(tag => `<span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">${tag}</span>`).join('')}
-                    </div>
-                    <a href="${companion.url || '#'}" target="_blank" class="text-purple-600 hover:text-purple-700 font-medium transition-colors">Learn More →</a>
-                </div>
-            `;
-            
-            return card;
-        }
-
-        // 生成星级评分
-        function generateRatingStars(rating) {
-            const fullStars = Math.floor(rating);
-            const halfStar = rating % 1 >= 0.5;
-            const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
-            
-            let starsHtml = '';
-            
-            // 添加满星
-            for (let i = 0; i < fullStars; i++) {
-                starsHtml += '<svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>';
-            }
-            
-            // 添加半星
-            if (halfStar) {
-                starsHtml += '<svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" clip-path="inset(0 50% 0 0)"></path></svg>';
-            }
-            
-            // 添加空星
-            for (let i = 0; i < emptyStars; i++) {
-                starsHtml += '<svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>';
-            }
-            
-            return starsHtml;
-        }
-
-        // 图像加载优化
-        document.addEventListener('DOMContentLoaded', () => {
-            // 渲染热门AI伴侣区域
-            renderFeaturedCompanions();
-            
-            // 渲染趋势和新闻部分
-            renderTrends();
-            renderNews();
-            
-            // 使用Intersection Observer优化图片加载
-            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-            
-            if ('IntersectionObserver' in window) {
-                const imageObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            img.classList.remove('loading');
-                            imageObserver.unobserve(img);
-                        }
-                    });
-                }, {
-                    rootMargin: '100px 0px'  // 提前100px加载
-                });
-                
-                lazyImages.forEach(img => imageObserver.observe(img));
-            } else {
-                // 降级处理，对于不支持IntersectionObserver的浏览器
-                lazyImages.forEach(img => img.classList.remove('loading'));
-            }
-        });
-        
-        // 渲染热门AI伴侣
-        function renderFeaturedCompanions() {
-            const featuredContainer = document.getElementById('featuredContainer');
-            if (!featuredContainer) return;
-            
-            // 合并数据并筛选评分较高的伴侣
-            const allCompanions = [...aiCompanions, ...scrapedCompanions.map((item, index) => ({
-                id: aiCompanions.length + index + 1,
-                name: item.name,
-                description: item.description,
-                image: item.image,
-                category: item.category,
-                tags: item.features,
-                url: item.url,
-                rating: item.rating,
-                reviews: item.reviews
-            }))];
-            
-            // 按评分排序并选取前3个
-            const topCompanions = allCompanions
-                .sort((a, b) => b.rating - a.rating)
-                .slice(0, 3);
-            
-            // 清空容器
-            featuredContainer.innerHTML = '';
-            
-            // 渲染卡片
-            topCompanions.forEach(companion => {
-                const card = createCompanionCard(companion);
-                featuredContainer.appendChild(card);
-            });
-        }
-        
-        // 渲染趋势部分
-        function renderTrends() {
-            const trendsContainer = document.getElementById('trendsContainer');
-            if (!trendsContainer) return;
-            
-            trendsContainer.innerHTML = trendingTopics.map(topic => `
-                <div class="flex items-center justify-between p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
-                    <span class="font-medium text-gray-800">${topic.name}</span>
-                    <div>
-                        <span class="text-sm text-gray-500 mr-2">${topic.searches.toLocaleString()}次搜索</span>
-                        <span class="text-green-500 text-sm font-medium">${topic.growth}</span>
-                    </div>
-                </div>
-            `).join('');
-        }
-        
-        // 渲染新闻部分
-        function renderNews() {
-            const newsContainer = document.getElementById('newsContainer');
-            if (!newsContainer) return;
-            
-            newsContainer.innerHTML = industryNews.map(news => `
-                <a href="${news.url}" class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
-                    <h3 class="font-semibold text-gray-800 mb-1">${news.title}</h3>
-                    <div class="flex items-center text-sm text-gray-500">
-                        <span>${news.source}</span>
-                        <span class="mx-2">•</span>
-                        <time datetime="${news.date}">${formatDate(news.date)}</time>
-                    </div>
-                </a>
-            `).join('');
-        }
-        
-        // 辅助函数：格式化日期
-        function formatDate(dateString) {
-            const date = new Date(dateString);
-            return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-        }
-        
-        // 页面性能优化
-        window.addEventListener('load', () => {
-            // 延迟加载非关键资源
-            setTimeout(() => {
-                // 可以在这里加载其他非关键脚本或资源
-            }, 2000);
-        });
-
-        // 模拟数据抓取函数（实际应用中需要使用后端服务）
-        async function scrapeWebsite(url) {
-            console.log(`模拟抓取网站: ${url}`);
-            // 实际环境中，这里应该使用fetch或ajax向后端API发起请求
-            
-            return new Promise(resolve => {
-                setTimeout(() => {
-                    resolve({
-                        success: true,
-                        message: '抓取成功',
-                        data: {
-                            url: url,
-                            title: '抓取的网站标题',
-                            content: '抓取的内容...'
-                        }
-                    });
-                }, 1000);
-            });
-        }
-
-        // Newsletter Subscription
-        function handleSubscribe() {
-            const email = document.getElementById('emailInput').value;
-            
-            if (!email || !email.includes('@')) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            
-            // 模拟订阅成功
-            alert('Subscription successful! Thank you for subscribing.');
-            document.getElementById('emailInput').value = '';
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 
