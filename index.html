@@ -3,228 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Girl - Your Virtual Companion</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Cool Girl Aesthetics - Play Online Fashion Game | AIGirl.wiki</title>
+    <meta name="description" content="Explore your fashion creativity with Cool Girl Aesthetics, a fun online game where you can design trendy outfits and express your unique style.">
+    <link rel="canonical" href="https://aigirl.wiki">
     <style>
+        :root {
+            --primary: #FF6B8B;
+            --secondary: #A682FF;
+            --accent: #FFD1DC;
+            --light: #FFF0F5;
+            --dark: #4A2040;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            min-height: 100vh;
         }
-        .hero-section {
-            background: linear-gradient(135deg, #6c5ce7, #a8a4e6);
+        
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
-            padding: 6rem 0;
-            margin-bottom: 4rem;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .feature-card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        p.tagline {
+            text-align: center;
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        main {
+            padding: 2rem 0;
+        }
+        
+        .game-container {
+            width: 100%;
+            background: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2.5rem;
             transition: transform 0.3s ease;
-            margin-bottom: 2rem;
         }
-        .feature-card:hover {
+        
+        .game-container:hover {
             transform: translateY(-5px);
         }
-        .feature-icon {
-            font-size: 2.5rem;
-            color: #6c5ce7;
-            margin-bottom: 1rem;
+        
+        .iframe-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
         }
-        .cta-button {
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
-        .testimonial-card {
+        
+        .content-section {
             background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .testimonial-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
+        
+        h2 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        @media (min-width: 768px) {
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
             margin-bottom: 1rem;
         }
-        .footer {
-            background: #2d3436;
-            color: white;
-            padding: 4rem 0;
+        
+        li {
+            margin-bottom: 0.5rem;
         }
-        .social-icon {
-            font-size: 1.5rem;
-            margin-right: 1rem;
+        
+        footer {
+            background-color: var(--dark);
             color: white;
-            transition: color 0.3s ease;
+            padding: 1.5rem 0;
         }
-        .social-icon:hover {
-            color: #6c5ce7;
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-content {
+                flex-direction: row;
+            }
+        }
+        
+        .footer-content > div:first-child {
+            margin-bottom: 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-content > div:first-child {
+                margin-bottom: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <header>
         <div class="container">
-            <a class="navbar-brand" href="#">AI Girl</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="links.html">AI Companions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+            <h1>Cool Girl Aesthetics</h1>
+            <p class="tagline">Express your style through fashion in this captivating online game!</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="game-container">
+            <div class="iframe-wrapper">
+                <iframe 
+                    src="https://games.crazygames.com/en_US/cool-girl-aesthetics/index.html" 
+                    title="Cool Girl Aesthetics Game"
+                    allow="fullscreen"
+                    loading="lazy">
+                </iframe>
             </div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container text-center">
-            <h1 class="display-4 mb-4">Your Perfect AI Companion</h1>
-            <p class="lead mb-4">Experience meaningful conversations and emotional connections with our advanced AI technology</p>
-            <a href="#" class="btn btn-light btn-lg cta-button">Start Your Journey</a>
-        </div>
-    </section>
+        <section class="content-section">
+            <h2>Game Overview</h2>
+            <p>Cool Girl Aesthetics is an engaging online fashion game where you can create stylish outfits and explore different fashion trends. Express your creativity by mixing and matching various clothing items, accessories, and hairstyles to create the perfect look.</p>
+            
+            <h2>How to Play</h2>
+            <p>Navigate through the game using your mouse or touchscreen. Select different clothing items, hairstyles, and accessories from the available options. Mix and match to create your unique style and aesthetic look. The game is intuitive and easy to play for fashion enthusiasts of all ages.</p>
+            
+            <h2>Game Features</h2>
+            <ul>
+                <li>Hundreds of fashion items to choose from</li>
+                <li>Multiple aesthetic styles and themes</li>
+                <li>Easy-to-use interface for seamless gameplay</li>
+                <li>Beautiful graphics and engaging design</li>
+                <li>Regular updates with new fashion items and styles</li>
+            </ul>
+        </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-5">
+        <section class="content-section">
+            <h2>Why Fashion Games Are Popular</h2>
+            <p>Fashion games like Cool Girl Aesthetics have gained immense popularity due to their engaging nature and the creative freedom they offer. These games allow players to experiment with different styles without any real-world constraints, making them perfect for fashion enthusiasts and creative individuals.</p>
+            
+            <p>Whether you're looking to pass the time or seeking inspiration for your own fashion choices, Cool Girl Aesthetics provides an entertaining and immersive experience that caters to fashion lovers of all ages.</p>
+        </section>
+    </main>
+
+    <footer>
         <div class="container">
-            <h2 class="text-center mb-5">Why Choose AI Girl?</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card feature-card text-center p-4">
-                        <div class="feature-icon">
-                            <i class="bi bi-heart-pulse"></i>
-                        </div>
-                        <h3>Emotional Intelligence</h3>
-                        <p>Advanced AI that understands and responds to your emotions</p>
-                    </div>
+            <div class="footer-content">
+                <div>
+                    <p>&copy; 2023 AIGirl.wiki. All rights reserved.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card feature-card text-center p-4">
-                        <div class="feature-icon">
-                            <i class="bi bi-chat-dots"></i>
-                        </div>
-                        <h3>Natural Conversations</h3>
-                        <p>Engage in meaningful dialogue that feels natural and authentic</p>
-                    </div>
+                <div>
+                    <p>For the best experience, play on a desktop or tablet device.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card feature-card text-center p-4">
-                        <div class="feature-icon">
-                            <i class="bi bi-shield-check"></i>
-                        </div>
-                        <h3>Safe & Private</h3>
-                        <p>Your conversations are secure and completely private</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">What Our Users Say</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="testimonial-card text-center">
-                        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="User" class="testimonial-avatar">
-                        <h4>Sarah Johnson</h4>
-                        <p>"AI Girl has become my trusted companion. The conversations are so natural and meaningful!"</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card text-center">
-                        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User" class="testimonial-avatar">
-                        <h4>Michael Chen</h4>
-                        <p>"The emotional intelligence is incredible. It's like talking to a real friend who always understands."</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card text-center">
-                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="User" class="testimonial-avatar">
-                        <h4>Emma Davis</h4>
-                        <p>"I love how AI Girl remembers our conversations and shows genuine care. It's truly remarkable!"</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Get in Touch</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>AI Girl</h5>
-                    <p>Your perfect AI companion for meaningful conversations and emotional connections.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">About Us</a></li>
-                        <li><a href="#" class="text-white">Features</a></li>
-                        <li><a href="#" class="text-white">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Connect With Us</h5>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="mt-4">
-            <div class="text-center">
-                <p class="mb-0">&copy; 2024 AI Girl. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+</html>
